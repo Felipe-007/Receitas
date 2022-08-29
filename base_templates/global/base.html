@@ -12,17 +12,12 @@
   {% include 'global/partials/_search.html' %}
 
   <main class="main-content-container">
-    <div class="main-content main-content-list container">
-
-      <!-- vinculado ao _recipe.html -->
-      {% include 'global/partials/_recipe.html' %}
-      
-    </div>
+    <!-- cria o bloco de conteudo, mudando a pagina somente o bloco content -->
+    {% block content %}{% endblock %}
   </main>
 
   <!-- vinculado ao _footer.html -->
   {% include 'global/partials/_footer.html' %}
-
 </body>
 
 </html>

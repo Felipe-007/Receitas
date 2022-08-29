@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends 'global/base.html' %}
 
-<!-- vinculado ao _head.html -->
-{% include 'global/partials/_head.html' %}
-
-<body>
-  <!-- vinculado ao _header.html -->
-  {% include 'global/partials/_header.html' %}
-
-  <!-- vinculado ao _search.html -->
-  {% include 'global/partials/_search.html' %}
-
-  <main class="main-content-container">
-    <div class="main-content main-content-detail container">
-
-      <!-- vinculado ao _recipe.html -->
-      {% include 'global/partials/_recipe.html' %}
-      
-    </div>
-  </main>
-
-  <!-- vinculado ao _footer.html -->
-  {% include 'global/partials/_footer.html' %}
-
-</body>
-
-</html>
+<!-- extends do base.html, mudando a pagina somente o bloco content -->
+{% block content %}
+  <div class="main-content main-content-detail container">
+    <!-- vinculado ao _recipe.html -->
+    {% include 'global/partials/_recipe.html' %}      
+  </div>
+{% endblock %}
