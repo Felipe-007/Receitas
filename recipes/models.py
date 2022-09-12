@@ -6,6 +6,9 @@ from django.contrib.auth.models import User
 class Category(models.Model):
     name = models.CharField(max_length=65)
 
+    def __str__(self):
+        return self.name
+
 
 class Recipe(models.Model):
     title = models.CharField(max_length=65)
@@ -40,3 +43,6 @@ class Recipe(models.Model):
 # cover
 # category (Relação)
 # Author (Relação)
+
+# auto_now =  atualiza a data toda vez que o objeto é modificado.
+# auto_now_add = atualiza a data apenas na criação do objeto.
