@@ -30,8 +30,8 @@ class Recipe(models.Model):
         verbose_name="Imagem")
     # category = faz a relação entre caregoria e as receitas
     category = models.ForeignKey(
-        Category, on_delete=models.SET_NULL, null=True,
-        verbose_name="Categoria")
+        Category, on_delete=models.SET_NULL, null=True, blank=True,
+        default=None, verbose_name="Categoria")
 
     author = models.ForeignKey(
         User, on_delete=models.SET_NULL, null=True, verbose_name="Autor")
