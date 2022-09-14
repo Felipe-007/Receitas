@@ -1,0 +1,16 @@
+{% extends 'global/base.html' %}
+
+{% block title %}Category | {% endblock title %}
+
+<!-- extends do base.html, mudando a pagina somente o bloco content -->
+{% block content %}
+  <div class="main-content main-content-list container">
+
+    <!-- repete a receita 10vezes -->
+    {% for recipe in recipes %}
+      <!-- vinculado ao _recipe.html -->
+      {% include 'global/partials/_recipe.html' %}      
+    {% endfor %}
+
+  </div>
+{% endblock %}
