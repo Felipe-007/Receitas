@@ -9,8 +9,12 @@
     <!-- repete a receita 10vezes -->
     {% for recipe in recipes %}
       <!-- vinculado ao _recipe.html -->
-      {% include 'global/partials/_recipe.html' %}      
-    {% endfor %}
+      {% include 'global/partials/_recipe.html' %}
 
+      {% empty %}
+        <div class="center">
+          <h1>Não existem receitas publicadas.</h1>
+        </div>
+    {% endfor %}
   </div>
 {% endblock %}
