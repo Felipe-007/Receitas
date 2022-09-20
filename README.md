@@ -23,6 +23,9 @@ O projeto tem a finalidade de criar receitas (ainda incompleto) feito com Django
 -   [ ] Mysql
 -   [ ] Django Crispy Forms
 -   [ ] Gunicorn
+-   [ ] Pytest
+-   [ ] Pytest-Django
+-   [ ] Unittest
 
 
 ## 🔖 Deploy
