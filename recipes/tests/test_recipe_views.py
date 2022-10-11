@@ -27,3 +27,11 @@ class RecipeViewsTest(TestCase):
     def test_recipe_home_view_loads_correct_template(self):
       response = self.client.get(reverse('recipes:home'))
       self.assertTemplateUsed(response, 'recipes/pages/home.html')
+
+    def test_recipe_search_uses_correct_view_function(self):
+        resolved = resolve(reverse('recipes:search'))
+        self.assertIs(resolved.func, views.search)
+
+    def test_recipe_search_loads_correct_template(self):
+        response = self.client.get(reverse('recipes:search'))
+        self.assertTemplateUsed(response, 'recipes/pages/search.html')

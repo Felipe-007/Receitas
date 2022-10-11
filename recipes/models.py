@@ -1,5 +1,6 @@
 # tabela de dados
 from email.policy import default
+from enum import unique
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -14,7 +15,7 @@ class Category(models.Model):
 class Recipe(models.Model):
     title = models.CharField(max_length=65, verbose_name="Titulo")
     description = models.CharField(max_length=165, verbose_name="Descrição")
-    slug = models.SlugField()
+    slug = models.SlugField(unique=True)
     preparation_time = models.IntegerField(verbose_name="Tempo de preparação")
     preparation_time_unit = models.CharField(max_length=65)
     servings = models.IntegerField(verbose_name="Porções")
