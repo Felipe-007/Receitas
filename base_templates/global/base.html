@@ -18,7 +18,8 @@
 
   <main class="main-content-container">
     <!-- cria o bloco de conteudo, mudando a pagina somente o bloco content -->
-    {% block content %}{% endblock %}
+    {% block content %}{% endblock %}      
+    {% include 'global/partials/_pagination.html' %}
   </main>
 
   <!-- vinculado ao _footer.html -->
