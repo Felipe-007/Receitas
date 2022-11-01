@@ -239,7 +239,7 @@ h6 {
   filter: brightness(2);
 }
 
-.main-content-detail  .recipe-list-item {
+.main-content-detail .recipe-list-item {
   max-width: 84rem;
   margin: 0 auto;
 }
@@ -249,7 +249,7 @@ h6 {
   box-shadow: -5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.preparation-steps{
+.preparation-steps {
   padding: var(--spacing-gutter-medium);
 }
 
@@ -287,6 +287,27 @@ h6 {
 .preparation-steps ul {
   margin: 2rem;
   padding: 0 2rem;
+}
+
+.preparation-content {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem 0.5rem;
+}
+
+.preparation .page-item {
+  background: var(--color-gray-3);
+  padding: 0.5rem 1rem;
+}
+
+.preparation .page-link {
+  text-decoration: none;
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.preparation .page-current {
+  background: var(--color-primary-dark);
 }
 
 .center {
