@@ -4,6 +4,9 @@
 
 <!-- extends do base.html, mudando a pagina somente o bloco content -->
 {% block content %}
+
+  {% include 'recipes/pages/messages.html' %}
+
   <div class="main-content main-content-list container">
 
     <!-- repete a receita 10vezes -->
