@@ -1,11 +1,11 @@
+from django.contrib import messages
 from django.http import Http404
 from django.shortcuts import redirect, render
-from django.contrib import messages
 
 from .forms import RegisterForm
 
 
-def register_view(request):    
+def register_view(request):
     register_form_data = request.session.get('register_form_data', None)
     form = RegisterForm(register_form_data)
     return render(request, 'authors/pages/register_view.html', {
